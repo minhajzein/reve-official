@@ -2,11 +2,11 @@ import { useAnimations, useGLTF } from '@react-three/drei'
 import { useEffect, useRef } from 'react'
 import { Group, LoopRepeat, Mesh, MeshStandardMaterial } from 'three'
 
-useGLTF.preload('/brain_hologram.glb')
+useGLTF.preload('/ophanim_angel.glb')
 
 function Model() {
 	const group = useRef<Group>(null)
-	const { nodes, materials, animations, scene } = useGLTF('/brain_hologram.glb')
+	const { nodes, materials, animations, scene } = useGLTF('/ophanim_angel.glb')
 	const { actions } = useAnimations(animations, scene)
 
 	useEffect(() => {
