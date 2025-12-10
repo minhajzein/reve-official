@@ -79,7 +79,7 @@ function Navigations() {
 						<Input
 							type='email'
 							placeholder='Enter your email'
-							className='rounded-[8px] w-fit ring-0 focus:ring-0'
+							className='w-fit h-full ring-0 focus:ring-0'
 						/>
 						<Button variant='default' className='h-fit'>
 							<FaTelegramPlane />

@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@/app/contexts/ThemeContext'
+import { useTheme } from '@/contexts/ThemeContext'
 import Image from 'next/image'
 import Link from 'next/link'
 

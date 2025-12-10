@@ -14,9 +14,9 @@ function Scene() {
 	return (
 		<Canvas
 			gl={{ antialias: true }}
-			camera={{ position: [0, 0, 5], fov: 50 }}
+			camera={{ position: [0, 0, 5], fov: 70 }}
 			dpr={[1, 1.5]}
-			className='w-full'
+			className='w-full cursor-grab'
 		>
 			<ambientLight intensity={0.6} />{' '}
 			<directionalLight position={[5, 5, 5]} intensity={1.2} castShadow />
@@ -26,7 +26,7 @@ function Scene() {
 					<Model />
 				</Bounds>
 			</Suspense>
-			<OrbitControls />
+			<OrbitControls enableZoom={false} />
 		</Canvas>
 	)
 }

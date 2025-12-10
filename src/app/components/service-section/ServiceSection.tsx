@@ -8,7 +8,7 @@ import { MdOutlineArrowOutward } from 'react-icons/md'
 function ServiceSection() {
 	return (
 		<div className='w-full grid grid-cols-2 md:grid-cols-4 gap-[8px] rounded-[16px] p-[8px] border-8 border-secondary'>
-			<div className='flex group relative cursor-pointer flex-col bg-secondary rounded-[8px] justify-center px-[16px] gap-[16px] py-[40px] items-center'>
+			<div className='flex group hover:scale-95 transition-all relative cursor-pointer flex-col bg-secondary rounded-[8px] justify-center px-[16px] gap-[16px] py-[40px] items-center'>
 				<MdOutlineArrowOutward className='absolute top-[16px] right-[16px] size-[32px] text-gray-500' />
 				<div className='flex size-[82px] relative'>
 					<Image
@@ -23,7 +23,7 @@ function ServiceSection() {
 					Perfect Web Solutions
 				</p>
 			</div>
-			<div className='flex group relative cursor-pointer flex-col bg-secondary rounded-[8px] justify-center px-[16px] gap-[16px] py-[40px] items-center'>
+			<div className='flex group transition-all hover:scale-95 relative cursor-pointer flex-col bg-secondary rounded-[8px] justify-center px-[16px] gap-[16px] py-[40px] items-center'>
 				<MdOutlineArrowOutward className='absolute top-[16px] right-[16px] size-[32px] text-gray-500' />
 				<div className='flex size-[82px] relative'>
 					<Image
@@ -38,7 +38,7 @@ function ServiceSection() {
 					Stunning Mobile Apps
 				</p>
 			</div>
-			<div className='flex group relative cursor-pointer flex-col bg-secondary rounded-[8px] justify-center px-[16px] gap-[16px] py-[40px] items-center'>
+			<div className='flex group transition-all hover:scale-95 relative cursor-pointer flex-col bg-secondary rounded-[8px] justify-center px-[16px] gap-[16px] py-[40px] items-center'>
 				<MdOutlineArrowOutward className='absolute top-[16px] right-[16px] size-[32px] text-gray-500' />
 				<div className='flex size-[82px] relative'>
 					<Image
@@ -53,7 +53,7 @@ function ServiceSection() {
 					Digital Marketing
 				</p>
 			</div>
-			<div className='flex relative group cursor-pointer flex-col bg-secondary rounded-[8px] justify-center px-[16px] gap-[16px] py-[40px] items-center'>
+			<div className='flex relative transition-all hover:scale-95 group cursor-pointer flex-col bg-secondary rounded-[8px] justify-center px-[16px] gap-[16px] py-[40px] items-center'>
 				<MdOutlineArrowOutward className='absolute top-[16px] right-[16px] size-[32px] text-gray-500' />
 				<div className='flex size-[82px] relative'>
 					<Image

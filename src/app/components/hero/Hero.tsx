@@ -1,5 +1,7 @@
-import TitleSection from './TitleSection'
+'use client'
+
 import ImageSection from './ImageSection'
+import TitleSection from './TitleSection'
 
 function Hero() {
 	return (

@@ -1,6 +1,6 @@
 'use client'
 
-import navItems from '@/app/lib/constants/navItems'
+import navItems from '@/lib/constants/navItems'
 import Link from 'next/link'
 import { ComponentType, SVGProps } from 'react'
 
