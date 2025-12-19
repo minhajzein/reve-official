@@ -3,14 +3,13 @@
 import { Canvas } from '@react-three/fiber'
 import Model from './Model'
 import { Suspense } from 'react'
-import { Html, OrbitControls, Stage, useProgress } from '@react-three/drei'
+import { Html, OrbitControls, Stage } from '@react-three/drei'
 
 function Loader() {
-	const { progress, active } = useProgress()
-	return <Html center>{progress.toFixed(1)} % loaded</Html>
+	return <Html center><div className="text-white">Loading...</div></Html>
 }
 
-function Scene() {
+function Scene({ activeAnimation }: { activeAnimation: string }) {
 	return (
 		<Canvas
 			gl={{ antialias: true }}
@@ -21,7 +20,7 @@ function Scene() {
 		>
 			<Suspense fallback={<Loader />}>
 				<Stage environment='city' intensity={0.6} adjustCamera={false}>
-					<Model />
+					<Model activeAnimation={activeAnimation} />
 				</Stage>
 			</Suspense>
 			<OrbitControls makeDefault enableZoom={false} />
