@@ -3,7 +3,7 @@
 import { Canvas } from '@react-three/fiber'
 import Model from './Model'
 import { Suspense } from 'react'
-import { Bounds, Html, OrbitControls, useProgress } from '@react-three/drei'
+import { Html, OrbitControls, Stage, useProgress } from '@react-three/drei'
 
 function Loader() {
 	const { progress, active } = useProgress()
@@ -14,19 +14,17 @@ function Scene() {
 	return (
 		<Canvas
 			gl={{ antialias: true }}
-			camera={{ position: [0, 0, 5], fov: 70 }}
+			camera={{ position: [0, 0, 2.8], fov: 70 }}
 			dpr={[1, 1.5]}
-			className='w-full cursor-grab'
+			className='w-full h-full cursor-grab touch-pan-y'
+			style={{ touchAction: 'pan-y' }}
 		>
-			<ambientLight intensity={0.6} />{' '}
-			<directionalLight position={[5, 5, 5]} intensity={1.2} castShadow />
-			<pointLight position={[-5, -5, -5]} intensity={0.5} />
 			<Suspense fallback={<Loader />}>
-				<Bounds fit clip observe margin={1.2}>
+				<Stage environment='city' intensity={0.6} adjustCamera={false}>
 					<Model />
-				</Bounds>
+				</Stage>
 			</Suspense>
-			<OrbitControls enableZoom={false} />
+			<OrbitControls makeDefault enableZoom={false} />
 		</Canvas>
 	)
 }

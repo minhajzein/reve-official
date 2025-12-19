@@ -5,7 +5,7 @@ const Scene = dynamic(() => import('./brain/Scene'), { ssr: false })
 
 function ImageSection() {
 	return (
-		<div className='pointer-events-none w-full h-full'>
+		<div className='w-full h-[50vh] md:h-full'>
 			<Scene />
 		</div>
 	)

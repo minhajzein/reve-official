@@ -12,12 +12,11 @@ function Model() {
 	const { actions } = useAnimations(animations, scene)
 
 	useEffect(() => {
-		console.log(actions)
 
-		const action = actions['_bee_hover']
+		const action = actions['Look_Wave']
 
 		if (action) {
-			action.reset().setLoop(LoopRepeat, Infinity).play()
+			action.reset().fadeIn(0.5).setLoop(LoopRepeat, Infinity).play()
 		}
 		scene.traverse(obj => {
 			if (obj instanceof Mesh && obj.material instanceof MeshStandardMaterial) {
