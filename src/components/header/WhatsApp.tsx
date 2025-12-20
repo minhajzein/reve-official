@@ -10,9 +10,9 @@ function WhatsApp() {
 			target='_blank'
 			href={url}
 			rel='noopener noreferrer'
-			className='flex items-center text-[14px] h-[42px] dark:bg-transparent bg-primary dark:text-primary dark:hover:bg-primary dark:hover:text-primary-foreground cursor-pointer gap-[8px] px-[12px] py-[8px] border rounded-full text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300'
+			className='flex items-center text-[14px] h-[42px] bg-primary cursor-pointer gap-[8px] px-[12px] py-[8px] border rounded-full text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:scale-105 hover:shadow-lg transition-all duration-300'
 		>
-			<PiWhatsappLogoLight className='text-[24px] text-green-500' />
+			<PiWhatsappLogoLight className='text-[24px] text-white group-hover:animate-pulse' />
 			<span>Get Your Free Tech Consultation</span>
 		</a>
 	)

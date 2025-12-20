@@ -29,7 +29,7 @@ export default function RootLayout({
 				<ThemeProvider>
 					<ScrollToTop />
 					<Header />
-					{children}
+					<div className='pt-[72px]'>{children}</div>
 					<Footer />
 				</ThemeProvider>
 				<Analytics />

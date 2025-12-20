@@ -15,7 +15,7 @@ function NavItem({ item }: { item: Item }) {
 
 	return (
 		<Link
-			className='flex items-center hover:bg-secondary dark:text-primary dark:hover:text-primary-foreground h-[42px] group border-r cursor-pointer gap-[4px] px-[12px] text-primary transition-colors duration-300'
+			className='flex items-center hover:bg-secondary dark:text-primary-foreground dark:hover:text-primary h-[42px] group border-r cursor-pointer gap-[4px] px-[12px] text-primary transition-colors duration-300'
 			href={link}
 		>
 			{Icon && (
