@@ -31,7 +31,7 @@ function Model({ activeAnimation }: { activeAnimation: string }) {
 	}, [activeAnimation, actions, scene])
 
 	return (
-		<group ref={group}>
+		<group ref={group} scale={1.1}>
 			<primitive object={scene} />
 		</group>
 	)

@@ -15,7 +15,7 @@ const notoSans = Noto_Sans({
 
 export const metadata: Metadata = {
 	title: 'Reve Infotech',
-	description: 'A complete tech solutions for your bussiness',
+	description: 'A complete tech solutions for your business',
 }
 
 export default function RootLayout({

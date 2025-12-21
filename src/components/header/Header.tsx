@@ -8,19 +8,18 @@ import WhatsApp from './WhatsApp'
 function Header() {
 	const [isVisible, setIsVisible] = useState(true)
 	const [lastScrollY, setLastScrollY] = useState(0)
+	const [isScrolled, setIsScrolled] = useState(false)
 
 	useEffect(() => {
 		const handleScroll = () => {
 			const currentScrollY = window.scrollY
+			setIsScrolled(currentScrollY > 20)
 
 			if (currentScrollY < 10) {
-				// Always show header at top of page
 				setIsVisible(true)
 			} else if (currentScrollY > lastScrollY) {
-				// Scrolling down - hide header
 				setIsVisible(false)
 			} else {
-				// Scrolling up - show header
 				setIsVisible(true)
 			}
 
@@ -35,16 +34,19 @@ function Header() {
 	}, [lastScrollY])
 
 	return (
-		<div
-			className={`w-full bg-background fixed top-0 px-[16px] z-50 md:px-[80px] py-[15px] flex justify-between items-center transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+		<header
+			className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+				} ${isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border/40 py-[12px]' : 'bg-transparent py-[20px]'
 				}`}
 		>
-			<Logo />
-			<Navbar />
-			<div className='flex items-center gap-[8px]'>
-				<WhatsApp />
+			<div className='max-w-[1440px] mx-auto px-[20px] md:px-[80px] flex justify-between items-center'>
+				<Logo />
+				<Navbar />
+				<div className='flex items-center gap-[12px]'>
+					<WhatsApp />
+				</div>
 			</div>
-		</div>
+		</header>
 	)
 }
 

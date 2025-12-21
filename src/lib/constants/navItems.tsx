@@ -1,6 +1,6 @@
 'use client'
 
-import { Cog, House, ShieldUser } from 'lucide-react'
+import { Cog, House, BookOpen, Info, Headset } from 'lucide-react'
 import { ComponentType, SVGProps } from 'react'
 
 export type Item = {
@@ -17,14 +17,24 @@ function navItems(): Item[] {
 			Icon: House,
 		},
 		{
+			label: 'Blogs',
+			link: '/blog',
+			Icon: BookOpen,
+		},
+		{
 			label: 'Services',
 			link: '/services',
 			Icon: Cog,
 		},
 		{
 			label: 'About Us',
-			link: '/about',
-			Icon: ShieldUser,
+			link: '/about-us',
+			Icon: Info,
+		},
+		{
+			label: 'Contact',
+			link: '/contact',
+			Icon: Headset,
 		},
 	]
 }

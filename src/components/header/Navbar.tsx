@@ -1,40 +1,43 @@
 'use client'
 
-import navItems from '@/lib/constants/navItems'
+import navItems, { Item } from '@/lib/constants/navItems'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { ComponentType, SVGProps } from 'react'
 
-type Item = {
-	label: string
-	link: string
-	Icon?: ComponentType<SVGProps<SVGSVGElement>>
-}
-
-function NavItem({ item }: { item: Item }) {
+function NavItem({ item, isActive }: { item: Item; isActive: boolean }) {
 	const { link, label, Icon } = item
 
 	return (
 		<Link
-			className='flex items-center hover:bg-secondary dark:text-primary-foreground dark:hover:text-primary h-[42px] group border-r cursor-pointer gap-[4px] px-[12px] text-primary transition-colors duration-300'
+			className={`flex items-center px-[16px] py-[8px] rounded-full transition-all duration-300 group cursor-pointer ${isActive
+				? 'bg-primary text-white shadow-lg shadow-primary/20'
+				: 'hover:bg-primary/10 text-foreground/80 hover:text-primary'
+				}`}
 			href={link}
 		>
 			{Icon && (
-				<Icon className='size-[18px] flip-on-hover transform-gpu group-hover:animate-collapsible-down' />
+				<Icon
+					className={`size-[16px] mr-[8px] transition-transform group-hover:-translate-y-[2px] ${isActive ? 'text-white' : ''
+						}`}
+				/>
 			)}
-			<span className='text-[14px]'>{label}</span>
+			<span className='text-[14px] font-medium'>{label}</span>
 		</Link>
 	)
 }
 
 function Navbar() {
 	const navs = navItems()
+	const pathname = usePathname()
 
 	return (
-		<div className='border rounded-full overflow-hidden h-[42px] flex justify-center items-center'>
-			{navs.map((item, i) => (
-				<NavItem key={i} item={item} />
-			))}
-		</div>
+		<nav className='bg-background/50 backdrop-blur-md border border-border/40 rounded-full px-[4px] py-[4px] hidden md:flex items-center gap-[4px]'>
+			{navs.map((item, i) => {
+				const isActive =
+					pathname === item.link || (item.link !== '/' && pathname.startsWith(item.link))
+				return <NavItem key={i} item={item} isActive={isActive} />
+			})}
+		</nav>
 	)
 }
 

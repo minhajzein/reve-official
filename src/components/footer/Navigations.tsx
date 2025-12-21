@@ -17,47 +17,32 @@ interface FooterSection {
 
 const footerSections: FooterSection[] = [
 	{
-		title: 'Home',
+		title: 'Company',
 		links: [
-			{ label: 'Hero Section', href: '#' },
-			{ label: 'Features', href: '#' },
-			{ label: 'Properties', href: '#' },
-			{ label: 'Testimonials', href: '#' },
-			{ label: "FAQ's", href: '#' },
-		],
-	},
-	{
-		title: 'About Us',
-		links: [
-			{ label: 'Our Story', href: '#' },
-			{ label: 'Our Works', href: '#' },
-			{ label: 'How It Works', href: '#' },
-			{ label: 'Our Team', href: '#' },
-			{ label: 'Our Clients', href: '#' },
-		],
-	},
-	{
-		title: 'Properties',
-		links: [
-			{ label: 'Portfolio', href: '#' },
-			{ label: 'Categories', href: '#' },
+			{ label: 'About Us', href: '/about-us' },
+			{ label: 'Our Service', href: '/services' },
+			{ label: 'Our Team', href: '/about-us' },
+			{ label: 'Contact Us', href: '/contact' },
+			{ label: "Careers", href: '#' },
 		],
 	},
 	{
 		title: 'Services',
 		links: [
-			{ label: 'Valuation Mastery', href: '#' },
-			{ label: 'Strategic Marketing', href: '#' },
-			{ label: 'Negotiation Wizardry', href: '#' },
-			{ label: 'Closing Success', href: '#' },
-			{ label: 'Property Management', href: '#' },
+			{ label: 'Web Solutions', href: '/services' },
+			{ label: 'Mobile Apps', href: '/services' },
+			{ label: 'AI & ML', href: '/services' },
+			{ label: 'Cloud Systems', href: '/services' },
+			{ label: 'Cyber Security', href: '/services' },
 		],
 	},
 	{
-		title: 'Contact Us',
+		title: 'Resources',
 		links: [
-			{ label: 'Contact Form', href: '#' },
-			{ label: 'Our Offices', href: '#' },
+			{ label: 'Blog', href: '/blog' },
+			{ label: 'Case Studies', href: '/blog' },
+			{ label: 'FAQ', href: '#' },
+			{ label: 'Support', href: '#' },
 		],
 	},
 ]
@@ -70,10 +55,9 @@ function Navigations() {
 					<Image
 						src='/images/secondary-logo.png'
 						alt='Reve Infotech'
-						width={0}
-						height={0}
-						sizes='100vw'
-						className=' object-contain size-[100px] cursor-pointer'
+						width={100}
+						height={100}
+						className='object-contain size-[100px] cursor-pointer'
 					/>
 					<div className='flex items-center h-fit gap-2 p-[4px]'>
 						<Input

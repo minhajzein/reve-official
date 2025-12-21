@@ -26,7 +26,7 @@ function ImageSection() {
 						<button
 							key={anim.name}
 							onClick={() => setActiveAnimation(anim.name)}
-							className={`p-2 md:p-3 rounded-lg backdrop-blur-sm transition-all duration-300 ${activeAnimation === anim.name
+							className={`p-2 md:p-3 rounded-lg backdrop-blur-sm transition-all duration-300 cursor-pointer ${activeAnimation === anim.name
 								? 'bg-blue-500/80 text-white scale-110'
 								: 'bg-white/20 text-white/70 hover:bg-white/30 hover:text-white'
 								}`}
