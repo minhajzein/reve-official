@@ -41,25 +41,25 @@ function Footer() {
 		<footer className='w-full bg-background pt-20 pb-10'>
 			<div className='max-w-[1440px] mx-auto px-[20px] md:px-[80px]'>
 
-				{/* Explore Section (Restored) */}
-				<div className='relative overflow-hidden rounded-[32px] border border-border/40 p-8 md:p-16 mb-20 bg-card group'>
+				{/* Explore Section */}
+				<div className='relative overflow-hidden rounded-[32px] border border-border/40 p-8 md:p-16 mb-20 bg-card group shadow-2xl'>
 					<Image
 						src='/images/left-abstract.png'
 						alt='Reve Infotech'
 						width={300}
 						height={300}
-						className='absolute top-0 left-0 h-full w-auto object-contain opacity-20 group-hover:opacity-40 transition-opacity hidden md:block'
+						className='absolute top-0 left-0 h-full w-auto object-contain opacity-20 group-hover:opacity-40 transition-opacity hidden md:block pointer-events-none'
 					/>
 					<div className='relative z-10 flex flex-col md:flex-row items-center justify-between gap-8'>
 						<div className='max-w-2xl text-center md:text-left'>
-							<h2 className='text-3xl md:text-4xl font-bold mb-4'>
+							<h2 className='text-2xl md:text-3xl font-bold mb-4'>
 								Start Your Digital <span className='text-primary'>Transformation</span> Today
 							</h2>
-							<p className='text-muted-foreground'>
+							<p className='text-muted-foreground text-sm leading-relaxed'>
 								Ready to take your business to the next level? Our team of experts is here to help you navigate the digital landscape with cutting-edge IT solutions and innovative strategies.
 							</p>
 						</div>
-						<Link href='/services' className='px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-primary/90 transition-all whitespace-nowrap'>
+						<Link href='/services' className='px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-primary/90 transition-all whitespace-nowrap shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] cursor-pointer text-base'>
 							Explore our services
 						</Link>
 					</div>
@@ -68,7 +68,7 @@ function Footer() {
 						alt='Reve Infotech'
 						width={300}
 						height={300}
-						className='absolute bottom-0 right-0 h-full w-auto object-contain opacity-20 group-hover:opacity-40 transition-opacity'
+						className='absolute bottom-0 right-0 h-full w-auto object-contain opacity-20 group-hover:opacity-40 transition-opacity pointer-events-none'
 					/>
 				</div>
 
@@ -76,7 +76,7 @@ function Footer() {
 					{/* Brand & Newsletter */}
 					<div className='space-y-6'>
 						<Logo variant='square' />
-						<p className='text-muted-foreground text-xs md:w-[50%] max-w-sm'>
+						<p className='text-muted-foreground text-xs mt-2 md:w-[50%] max-w-sm'>
 							Empowering global enterprises with cutting-edge IT solutions and innovative digital products.
 						</p>
 						<div className='flex gap-4'>

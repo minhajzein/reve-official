@@ -32,18 +32,18 @@ function ContactPage() {
             <div className='absolute top-0 right-0 size-[600px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none' />
             <div className='absolute bottom-0 left-0 size-[500px] bg-blue-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none' />
 
-            <div className='max-w-[1440px] mx-auto px-[20px] md:px-[80px] pt-32 pb-24 relative z-10'>
+            <div className='max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pt-24 md:pt-32 pb-16 md:pb-24 relative z-10'>
                 {/* Header Section */}
-                <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start'>
-                    {/* Left Column: Info & Map */}
+                <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start'>
+                    {/* Left Column: Info */}
                     <div className='lg:col-span-5 flex flex-col gap-8'>
                         {/* Header Section (Moved here for better layout) */}
-                        <div className='mb-4'>
-                            <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[12px] font-bold mb-5'>
+                        <div className='mb-2'>
+                            <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] md:text-[12px] font-bold mb-5'>
                                 <span className='size-1.5 rounded-full bg-primary animate-pulse' />
                                 GET IN TOUCH
                             </div>
-                            <h1 className='text-4xl md:text-5xl font-extrabold mb-6 leading-tight tracking-tight'>
+                            <h1 className='text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 leading-tight tracking-tight'>
                                 Let's Build Something <span className='text-primary'>Great</span> Together
                             </h1>
                             <p className='text-muted-foreground text-lg leading-relaxed'>
@@ -81,14 +81,14 @@ function ContactPage() {
                     </div>
 
                     {/* Right Column: Form & Map */}
-                    <div className='lg:col-span-7 flex flex-col gap-8'>
-                        <div className='bg-card border border-border/40 rounded-[32px] p-6 md:p-8 shadow-2xl relative overflow-hidden group'>
+                    <div className='lg:col-span-7 flex flex-col gap-6 md:gap-8'>
+                        <div className='bg-card border border-border/40 rounded-[24px] md:rounded-[32px] p-5 md:p-8 shadow-2xl relative overflow-hidden group'>
                             <div className='absolute top-0 right-0 size-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors' />
 
-                            <form className='space-y-5 relative z-10'>
-                                <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+                            <form className='space-y-4 md:space-y-5 relative z-10'>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5'>
                                     <div className='space-y-2'>
-                                        <label className='text-[13px] font-bold text-foreground/70 ml-1 uppercase tracking-wider'>First Name</label>
+                                        <label className='text-[12px] md:text-[13px] font-bold text-foreground/70 ml-1 uppercase tracking-wider'>First Name</label>
                                         <input
                                             type='text'
                                             className='w-full bg-background/50 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground text-sm'
@@ -96,7 +96,7 @@ function ContactPage() {
                                         />
                                     </div>
                                     <div className='space-y-2'>
-                                        <label className='text-[13px] font-bold text-foreground/70 ml-1 uppercase tracking-wider'>Last Name</label>
+                                        <label className='text-[12px] md:text-[13px] font-bold text-foreground/70 ml-1 uppercase tracking-wider'>Last Name</label>
                                         <input
                                             type='text'
                                             className='w-full bg-background/50 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground text-sm'
@@ -105,7 +105,7 @@ function ContactPage() {
                                     </div>
                                 </div>
                                 <div className='space-y-2'>
-                                    <label className='text-[13px] font-bold text-foreground/70 ml-1 uppercase tracking-wider'>Email Address</label>
+                                    <label className='text-[12px] md:text-[13px] font-bold text-foreground/70 ml-1 uppercase tracking-wider'>Email Address</label>
                                     <input
                                         type='email'
                                         className='w-full bg-background/50 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground text-sm'
@@ -113,13 +113,13 @@ function ContactPage() {
                                     />
                                 </div>
                                 <div className='space-y-2'>
-                                    <label className='text-[13px] font-bold text-foreground/70 ml-1 uppercase tracking-wider'>How can we help?</label>
+                                    <label className='text-[12px] md:text-[13px] font-bold text-foreground/70 ml-1 uppercase tracking-wider'>How can we help?</label>
                                     <textarea
-                                        className='w-full bg-background/50 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground text-sm h-32 resize-none'
+                                        className='w-full bg-background/50 border border-border/40 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground text-sm h-28 md:h-32 resize-none'
                                         placeholder='Tell us about your project, goals, and timeline...'
                                     />
                                 </div>
-                                <button className='w-full py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary/90 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20 cursor-pointer text-base'>
+                                <button className='w-full py-3.5 md:py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary/90 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20 cursor-pointer text-sm md:text-base'>
                                     Send Message
                                     <MdOutlineArrowOutward className='size-4' />
                                 </button>
@@ -127,7 +127,7 @@ function ContactPage() {
                         </div>
 
                         {/* Map Section */}
-                        <div className='w-full h-[250px] bg-card border border-border/40 rounded-[32px] overflow-hidden relative group'>
+                        <div className='w-full h-[220px] md:h-[350px] bg-card border border-border/40 rounded-[24px] md:rounded-[32px] overflow-hidden relative group'>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125218.42838497645!2d75.72756857418641!3d11.2587531!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!4f13.1!3m3!1m2!1s0x3ba65938563d4747%3A0x321a5a4692751f5e!2sKozhikode%2C%20Kerala!5e0!3m2!1sen!2sin!4v1703140000000!5m2!1sen!2sin"
                                 width="100%"
@@ -136,10 +136,10 @@ function ContactPage() {
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                className='grayscale contrast-125 opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700'
+                                className='opacity-100 transition-all duration-700'
                             />
-                            {/* Overlay for aesthetic */}
-                            <div className='absolute inset-0 pointer-events-none border-[6px] border-card rounded-[32px]' />
+                            {/* Simplified aesthetic overlay */}
+                            <div className='absolute inset-0 pointer-events-none border-2 border-border/20 rounded-[24px] md:rounded-[32px]' />
                         </div>
                     </div>
                 </div>
