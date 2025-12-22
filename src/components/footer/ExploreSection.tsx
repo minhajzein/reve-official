@@ -9,7 +9,7 @@ function ExploreSection() {
 				alt='Reve Infotech'
 				width={400}
 				height={400}
-				className='md:h-full h-auto w-full md:w-auto hidden md:block absolute top-0 left-0 object-contain cursor-pointer opacity-30 group-hover:opacity-50 transition-opacity'
+				className='md:h-full h-auto w-full md:w-auto hidden md:block absolute top-0 left-0 object-contain cursor-pointer opacity-90 group-hover:opacity-100 transition-opacity'
 			/>
 
 			<div className='flex z-40 flex-col gap-[8px]'>
@@ -28,7 +28,7 @@ function ExploreSection() {
 				alt='Reve Infotech'
 				width={400}
 				height={400}
-				className='md:h-full h-auto w-full md:w-auto absolute bottom-0 right-0 object-contain cursor-pointer opacity-30 group-hover:opacity-50 transition-opacity'
+				className='md:h-full h-auto w-full md:w-auto absolute bottom-0 right-0 object-contain cursor-pointer opacity-90 group-hover:opacity-100 transition-opacity'
 			/>
 		</div>
 	)

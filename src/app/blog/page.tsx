@@ -36,13 +36,13 @@ const allPosts = [
 
 function BlogArchive() {
     return (
-        <main className='w-full bg-background pt-32 pb-24'>
+        <main className='w-full bg-background pt-20 pb-24'>
             <div className='max-w-[1440px] mx-auto px-[20px] md:px-[80px]'>
                 <div className='text-center mb-20 max-w-3xl mx-auto'>
-                    <h1 className='text-5xl md:text-7xl font-bold mb-6'>
+                    <h1 className='text-3xl md:text-5xl font-extrabold tracking-tight mb-6'>
                         Inside <span className='text-primary'>Reve</span> Insights
                     </h1>
-                    <p className='text-muted-foreground text-xl leading-relaxed'>
+                    <p className='text-base md:text-lg text-muted-foreground leading-relaxed'>
                         Deep dives into technology, strategy, and the future of digital innovation.
                     </p>
                 </div>

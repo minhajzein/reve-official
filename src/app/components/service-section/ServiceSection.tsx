@@ -16,7 +16,8 @@ const services = [
 		stats: [
 			{ label: 'PERFORMANCE', value: '99.9%' },
 			{ label: 'DEVELOPMENT', value: 'Agile' }
-		]
+		],
+		slug: 'web-solutions'
 	},
 	{
 		title: 'Mobile Apps',
@@ -27,7 +28,8 @@ const services = [
 		stats: [
 			{ label: 'PLATFORMS', value: 'Multi' },
 			{ label: 'UX DESIGN', value: 'Modern' }
-		]
+		],
+		slug: 'mobile-apps'
 	},
 	{
 		title: 'AI & Machine Learning',
@@ -38,7 +40,8 @@ const services = [
 		stats: [
 			{ label: 'ACCURACY', value: 'High' },
 			{ label: 'INTEGRATION', value: 'API' }
-		]
+		],
+		slug: 'ai-ml'
 	},
 	{
 		title: 'Cloud Systems',
@@ -49,7 +52,8 @@ const services = [
 		stats: [
 			{ label: 'UPTIME', value: '100%' },
 			{ label: 'SECURITY', value: 'AES-256' }
-		]
+		],
+		slug: 'cloud-systems'
 	}
 ]
 

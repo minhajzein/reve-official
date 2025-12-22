@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 import { IconType } from 'react-icons'
 
@@ -12,11 +13,12 @@ interface ServiceCardProps {
     icon: IconType
     tags: string[]
     stats: { label: string; value: string }[]
+    slug: string
 }
 
-const ServiceCard = ({ title, description, image, icon: Icon, tags, stats }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, image, icon: Icon, tags, stats, slug }: ServiceCardProps) => {
     return (
-        <div className='group relative bg-card border border-border/40 rounded-[32px] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2'>
+        <Link href={`/services/${slug}`} className='block group relative bg-card border border-border/40 rounded-[32px] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2'>
             {/* Image Section */}
             <div className='relative h-[240px] w-full overflow-hidden'>
                 <Image
@@ -68,7 +70,7 @@ const ServiceCard = ({ title, description, image, icon: Icon, tags, stats }: Ser
                     <MdOutlineArrowOutward className='size-5 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1' />
                 </button>
             </div>
-        </div>
+        </Link>
     )
 }
 

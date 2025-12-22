@@ -1,14 +1,24 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Hand, ArrowDown, Armchair } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 const Scene = dynamic(() => import('./brain/Scene'), { ssr: false })
 
 type Animation = 'Look_Wave' | 'Free_Fall' | 'Sitting'
 
 function ImageSection() {
 	const [activeAnimation, setActiveAnimation] = useState<Animation>('Look_Wave')
+	const pathname = usePathname()
+	const [sceneKey, setSceneKey] = useState(0)
+
+	// Force Scene remount when pathname changes
+	useEffect(() => {
+		if (pathname === '/') {
+			setSceneKey(prev => prev + 1)
+		}
+	}, [pathname])
 
 	const animations = [
 		{ name: 'Look_Wave' as Animation, icon: Hand, label: 'Wave' },
@@ -18,7 +28,7 @@ function ImageSection() {
 
 	return (
 		<div className='w-full h-[50vh] md:h-full relative'>
-			<Scene activeAnimation={activeAnimation} />
+			<Scene key={sceneKey} activeAnimation={activeAnimation} />
 			<div className='absolute right-2 md:right-4 top-1/2 -translate-y-1/2 flex flex-col gap-2 md:gap-3 z-10'>
 				{animations.map(anim => {
 					const Icon = anim.icon

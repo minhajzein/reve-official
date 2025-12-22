@@ -15,7 +15,8 @@ const allServices = [
 		stats: [
 			{ label: 'PERFORMANCE', value: '99.9%' },
 			{ label: 'DEVELOPMENT', value: 'Agile' }
-		]
+		],
+		slug: 'web-solutions'
 	},
 	{
 		title: 'Mobile Apps',
@@ -26,7 +27,8 @@ const allServices = [
 		stats: [
 			{ label: 'PLATFORMS', value: 'Multi' },
 			{ label: 'UX DESIGN', value: 'Modern' }
-		]
+		],
+		slug: 'mobile-apps'
 	},
 	{
 		title: 'AI & Machine Learning',
@@ -37,7 +39,8 @@ const allServices = [
 		stats: [
 			{ label: 'ACCURACY', value: 'High' },
 			{ label: 'INTEGRATION', value: 'API' }
-		]
+		],
+		slug: 'ai-ml'
 	},
 	{
 		title: 'Cloud Systems',
@@ -48,7 +51,8 @@ const allServices = [
 		stats: [
 			{ label: 'UPTIME', value: '100%' },
 			{ label: 'SECURITY', value: 'AES-256' }
-		]
+		],
+		slug: 'cloud-systems'
 	},
 	{
 		title: 'Cyber Security',
@@ -59,7 +63,8 @@ const allServices = [
 		stats: [
 			{ label: 'PROTECTION', value: '24/7' },
 			{ label: 'COMPLIANCE', value: 'GDPR' }
-		]
+		],
+		slug: 'cyber-security'
 	},
 	{
 		title: 'Digital Marketing',
@@ -70,19 +75,20 @@ const allServices = [
 		stats: [
 			{ label: 'ROI', value: '300%+' },
 			{ label: 'GROWTH', value: 'Linear' }
-		]
+		],
+		slug: 'digital-marketing'
 	}
 ]
 
 function ServicesPage() {
 	return (
-		<main className='w-full bg-background pt-32 pb-24'>
+		<main className='w-full bg-background pt-20 pb-24'>
 			<div className='max-w-[1440px] mx-auto px-[20px] md:px-[80px]'>
 				<div className='text-center mb-20 max-w-3xl mx-auto'>
-					<h1 className='text-5xl md:text-7xl font-bold mb-6'>
+					<h1 className='text-3xl md:text-5xl font-extrabold tracking-tight mb-6'>
 						Our <span className='text-primary'>Expert</span> Services
 					</h1>
-					<p className='text-muted-foreground text-xl leading-relaxed'>
+					<p className='text-base md:text-lg text-muted-foreground leading-relaxed'>
 						We provide a wide range of specialized IT services designed to transform your business and drive technological innovation.
 					</p>
 				</div>
@@ -95,10 +101,10 @@ function ServicesPage() {
 
 				<div className='mt-24 p-12 rounded-[40px] bg-primary/5 border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left'>
 					<div>
-						<h2 className='text-3xl font-bold mb-2'>Need a Custom Solution?</h2>
-						<p className='text-muted-foreground'>Let's discuss your unique requirements and build something extraordinary together.</p>
+						<h2 className='text-2xl md:text-3xl font-bold mb-2'>Need a Custom Solution?</h2>
+						<p className='text-base text-muted-foreground'>Let's discuss your unique requirements and build something extraordinary together.</p>
 					</div>
-					<button className='px-10 py-5 bg-primary text-white rounded-2xl font-bold hover:bg-primary/90 transition-all flex items-center gap-2 cursor-pointer'>
+					<button className='px-8 h-12 bg-primary text-white rounded-2xl font-bold hover:bg-primary/90 transition-all flex items-center gap-2 cursor-pointer text-base'>
 						Get a Free Consultation
 						<MdOutlineArrowOutward className='size-5' />
 					</button>

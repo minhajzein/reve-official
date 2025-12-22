@@ -39,24 +39,6 @@ function TitleSection() {
 					</Button>
 				</Link>
 			</div>
-
-			<div className='grid grid-cols-2 md:grid-cols-3 w-full gap-4 mt-2'>
-				<div className='flex flex-col py-3 px-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl hover:border-primary/50 hover:bg-white/15 transition-all duration-500 group relative overflow-hidden'>
-					<div className='absolute -right-4 -top-4 size-16 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/30 transition-all' />
-					<h1 className='text-3xl font-bold bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent group-hover:from-primary group-hover:to-blue-400 transition-all'>100+</h1>
-					<p className='text-xs font-semibold text-white/50 uppercase tracking-widest mt-0.5'>Happy customers</p>
-				</div>
-				<div className='flex flex-col py-3 px-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl hover:border-primary/50 hover:bg-white/15 transition-all duration-500 group relative overflow-hidden'>
-					<div className='absolute -right-4 -top-4 size-16 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/30 transition-all' />
-					<h1 className='text-3xl font-bold bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent group-hover:from-primary group-hover:to-blue-400 transition-all'>20+</h1>
-					<p className='text-xs font-semibold text-white/50 uppercase tracking-widest mt-0.5'>Projects completed</p>
-				</div>
-				<div className='flex flex-col py-3 px-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl hover:border-primary/50 hover:bg-white/15 transition-all duration-500 group col-span-full md:col-span-1 relative overflow-hidden'>
-					<div className='absolute -right-4 -top-4 size-16 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/30 transition-all' />
-					<h1 className='text-3xl font-bold bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent group-hover:from-primary group-hover:to-blue-400 transition-all'>4+</h1>
-					<p className='text-xs font-semibold text-white/50 uppercase tracking-widest mt-0.5'>Years of experience</p>
-				</div>
-			</div>
 		</div>
 	)
 }
