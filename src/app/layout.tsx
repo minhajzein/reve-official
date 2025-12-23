@@ -6,6 +6,7 @@ import { ThemeProvider } from '../contexts/ThemeContext'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const notoSans = Noto_Sans({
 	subsets: ['latin'],
@@ -77,6 +78,7 @@ export default function RootLayout({
 					<Footer />
 				</ThemeProvider>
 				<Analytics />
+				<GoogleAnalytics gaId='G-9150Y5WDJW' />
 			</body>
 		</html>
 	)
