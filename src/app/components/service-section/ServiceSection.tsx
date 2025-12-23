@@ -6,56 +6,10 @@ import { FaComputer, FaMobile, FaBrain, FaCloud, FaChevronLeft, FaChevronRight }
 import { MdOutlineArrowOutward } from 'react-icons/md'
 import useEmblaCarousel from 'embla-carousel-react'
 
-const services = [
-	{
-		title: 'Web Solutions',
-		description: 'Custom, high-performance web applications built with modern frameworks to scale your business operations.',
-		image: '/images/software-dev.png',
-		icon: FaComputer,
-		tags: ['Next.js', 'React', 'Premium'],
-		stats: [
-			{ label: 'PERFORMANCE', value: '99.9%' },
-			{ label: 'DEVELOPMENT', value: 'Agile' }
-		],
-		slug: 'web-solutions'
-	},
-	{
-		title: 'Mobile Apps',
-		description: 'Native and cross-platform mobile experiences that engage users and deliver seamless performance.',
-		image: '/images/mobile-app.png',
-		icon: FaMobile,
-		tags: ['iOS', 'Android', 'Flutter'],
-		stats: [
-			{ label: 'PLATFORMS', value: 'Multi' },
-			{ label: 'UX DESIGN', value: 'Modern' }
-		],
-		slug: 'mobile-apps'
-	},
-	{
-		title: 'AI & Machine Learning',
-		description: 'Intelligent solutions that leverage data to automate processes and provide actionable insights.',
-		image: '/images/ai-ml.png',
-		icon: FaBrain,
-		tags: ['AI', 'Data', 'LLM'],
-		stats: [
-			{ label: 'ACCURACY', value: 'High' },
-			{ label: 'INTEGRATION', value: 'API' }
-		],
-		slug: 'ai-ml'
-	},
-	{
-		title: 'Cloud Systems',
-		description: 'Scalable cloud infrastructure and DevOps practices to ensure your services remain available and secure.',
-		image: '/images/cloud.png',
-		icon: FaCloud,
-		tags: ['AWS', 'DevOps', 'Cloud'],
-		stats: [
-			{ label: 'UPTIME', value: '100%' },
-			{ label: 'SECURITY', value: 'AES-256' }
-		],
-		slug: 'cloud-systems'
-	}
-]
+import { servicesData } from '@/lib/services-data'
+
+const services = Object.values(servicesData).slice(0, 4)
+
 
 function ServiceSection() {
 	const [emblaRef, emblaApi] = useEmblaCarousel({

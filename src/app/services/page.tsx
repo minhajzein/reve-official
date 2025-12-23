@@ -5,80 +5,10 @@ import ServiceCard from '../components/service-section/ServiceCard'
 import { FaComputer, FaMobile, FaBrain, FaCloud, FaShieldHalved, FaChartLine } from 'react-icons/fa6'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 
-const allServices = [
-	{
-		title: 'Web Solutions',
-		description: 'Custom, high-performance web applications built with modern frameworks like Next.js and React. We focus on scalability, SEO, and flawless user experiences.',
-		image: '/images/software-dev.png',
-		icon: FaComputer,
-		tags: ['Next.js', 'React', 'Premium'],
-		stats: [
-			{ label: 'PERFORMANCE', value: '99.9%' },
-			{ label: 'DEVELOPMENT', value: 'Agile' }
-		],
-		slug: 'web-solutions'
-	},
-	{
-		title: 'Mobile Apps',
-		description: 'Native and cross-platform mobile experiences that engage users. We specialize in Flutter and React Native for high-performance iOS and Android apps.',
-		image: '/images/mobile-app.png',
-		icon: FaMobile,
-		tags: ['iOS', 'Android', 'Flutter'],
-		stats: [
-			{ label: 'PLATFORMS', value: 'Multi' },
-			{ label: 'UX DESIGN', value: 'Modern' }
-		],
-		slug: 'mobile-apps'
-	},
-	{
-		title: 'AI & Machine Learning',
-		description: 'Leverage the power of AI to automate processes and gain insights. Our solutions include LLM integration, predictive analytics, and computer vision.',
-		image: '/images/ai-ml.png',
-		icon: FaBrain,
-		tags: ['AI', 'Data', 'LLM'],
-		stats: [
-			{ label: 'ACCURACY', value: 'High' },
-			{ label: 'INTEGRATION', value: 'API' }
-		],
-		slug: 'ai-ml'
-	},
-	{
-		title: 'Cloud Systems',
-		description: 'Scalable cloud infrastructure and DevOps practices. We ensure your services are highly available, secure, and cost-optimized on AWS or Azure.',
-		image: '/images/cloud.png',
-		icon: FaCloud,
-		tags: ['AWS', 'DevOps', 'Cloud'],
-		stats: [
-			{ label: 'UPTIME', value: '100%' },
-			{ label: 'SECURITY', value: 'AES-256' }
-		],
-		slug: 'cloud-systems'
-	},
-	{
-		title: 'Cyber Security',
-		description: 'Protect your digital assets with our comprehensive security audits, penetration testing, and data encryption services.',
-		image: '/images/vision.png',
-		icon: FaShieldHalved,
-		tags: ['Security', 'Audit', 'EDR'],
-		stats: [
-			{ label: 'PROTECTION', value: '24/7' },
-			{ label: 'COMPLIANCE', value: 'GDPR' }
-		],
-		slug: 'cyber-security'
-	},
-	{
-		title: 'Digital Marketing',
-		description: 'Scale your online presence with data-driven marketing strategies, SEO optimization, and targeted social media campaigns.',
-		image: '/images/why-choose-us.png',
-		icon: FaChartLine,
-		tags: ['SEO', 'Ads', 'Growth'],
-		stats: [
-			{ label: 'ROI', value: '300%+' },
-			{ label: 'GROWTH', value: 'Linear' }
-		],
-		slug: 'digital-marketing'
-	}
-]
+import { servicesData } from '@/lib/services-data'
+
+const allServices = Object.values(servicesData)
+
 
 function ServicesPage() {
 	return (

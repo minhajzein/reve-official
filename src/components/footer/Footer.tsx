@@ -38,11 +38,11 @@ const footerLinks = [
 
 function Footer() {
 	return (
-		<footer className='w-full bg-background pt-20 pb-10'>
+		<footer className='w-full bg-background pt-12 pb-10'>
 			<div className='max-w-[1440px] mx-auto px-[20px] md:px-[80px]'>
 
 				{/* Explore Section */}
-				<div className='relative overflow-hidden rounded-[32px] border border-border/40 p-8 md:p-16 mb-20 bg-card group shadow-2xl'>
+				<div className='relative overflow-hidden rounded-[32px] border border-border/40 p-6 md:p-12 mb-12 bg-card group shadow-2xl'>
 					<Image
 						src='/images/left-abstract.png'
 						alt='Reve Infotech'

@@ -36,7 +36,7 @@ const allPosts = [
 
 function BlogArchive() {
     return (
-        <main className='w-full bg-background pt-20 pb-24'>
+        <main className='w-full bg-background py-12'>
             <div className='max-w-[1440px] mx-auto px-[20px] md:px-[80px]'>
                 <div className='text-center mb-20 max-w-3xl mx-auto'>
                     <h1 className='text-3xl md:text-5xl font-extrabold tracking-tight mb-6'>
