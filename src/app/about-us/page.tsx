@@ -26,12 +26,7 @@ const team = [
 		name: 'Anjali Jayaraj',
 		role: 'Co-Founder & Marketing Head',
 		image: '/images/anjali.jpg',
-	},
-	{
-		name: 'Abin Eldhose',
-		role: 'Senior Flutter Developer',
-		image: '/images/abin.JPG',
-	},
+	}
 ]
 
 const stats = [
